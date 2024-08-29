@@ -47,4 +47,4 @@ const MessageComponent = () => {
     );
 };
 
-ex
+export default MessageComponent;

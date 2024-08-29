@@ -8,3 +8,7 @@ function App() {
               <MessageComponent />
           </header>
       </div>
+  )
+}
+
+export default App

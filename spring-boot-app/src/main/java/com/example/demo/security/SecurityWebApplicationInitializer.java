@@ -22,4 +22,20 @@
 //     @Autowired
 //     public void initialize() {
 //         User.UserBuilder users = User.builder();
-//         inMemoryUserDetailsManager.createUser(users.username("user").password(new BCryptPasswordE
+//         inMemoryUserDetailsManager.createUser(users.username("user").password(new BCryptPasswordEncoder().encode("password")).roles("USER").build());
+//     }
+// }
+// import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
+
+/**
+ * No customizations of {@link AbstractSecurityWebApplicationInitializer} are necessary.
+ *
+ * @author Rob Winch
+ */
+// import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
+
+// public class SecurityWebApplicationInitializer
+// 	extends AbstractSecurityWebApplicationInitializer {
+
+// }
+
