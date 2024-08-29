@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css'
 import MessageComponent from './components/MessageComponent';
 function App() {
@@ -7,7 +8,7 @@ function App() {
               <MessageComponent />
           </header>
       </div>
-  );
+  )
 }
 
 export default App
