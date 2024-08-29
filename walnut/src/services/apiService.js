@@ -7,7 +7,7 @@ export const getMessages = async () => {
         const response = await axios.get(`${API_URL}/hello`);
         return response.data;
     } catch (error) {
-        console.error('Error fetching messages:', error);
+        console.error('Error fetching notes:', error);
         throw error;
     }
 };
@@ -17,7 +17,7 @@ export const saveMessage = async (content) => {
         const response = await axios.post(`${API_URL}/hello`, { content });
         return response.data;
     } catch (error) {
-        console.error('Error saving message:', error);
+        console.error('Error saving notes:', error);
         throw error;
     }
 };

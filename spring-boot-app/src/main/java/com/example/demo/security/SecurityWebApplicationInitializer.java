@@ -1,4 +1,4 @@
- package com.example.demo.security;
+ //package com.example.demo.security;
 
 // import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.security.core.userdetails.User;
@@ -32,10 +32,10 @@
  *
  * @author Rob Winch
  */
-import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
+// import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
-public class SecurityWebApplicationInitializer
-	extends AbstractSecurityWebApplicationInitializer {
+// public class SecurityWebApplicationInitializer
+// 	extends AbstractSecurityWebApplicationInitializer {
 
-}
+// }
 

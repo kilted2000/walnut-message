@@ -14,7 +14,7 @@ const MessageComponent = () => {
             const data = await getMessages();
             setMessages(data);
         } catch (error) {
-            console.error('Failed to fetch messages', error);
+            console.error('Failed to fetch messages.Tha mi Dulich', error);
         }
     };
 
@@ -24,7 +24,7 @@ const MessageComponent = () => {
             fetchMessages();
             setNewMessage('');
         } catch (error) {
-            console.error('Failed to save message', error);
+            console.error('Failed to save message. Tha mi Dulilch', error);
         }
     };
 
