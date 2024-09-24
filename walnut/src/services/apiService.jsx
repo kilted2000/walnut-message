@@ -1,7 +1,7 @@
 
  const API_URL = 'http://localhost:8080';
 
-export const getMessages = async () => {
+export const getNotes = async () => {
     try {
         const response = await fetch(`${API_URL}/hello`, {
             method: 'GET',
@@ -13,18 +13,18 @@ export const getMessages = async () => {
         });
 
         if (!response.ok) {
-            throw new Error(`Error fetching messages: ${response.status}`);
+            throw new Error(`Error fetching notes: ${response.status}`);
         }
 
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error('Error fetching messages:', error);
+        console.error('Error fetching notes:', error);
         throw error;
     }
 };
 
-export const saveMessage = async (content) => {
+export const saveNote = async (content) => {
     try {
         const response = await fetch(`${API_URL}/hello`, {
             method: 'POST',
@@ -37,13 +37,13 @@ export const saveMessage = async (content) => {
         });
 
         if (!response.ok) {
-            throw new Error(`Error saving message: ${response.status}`);
+            throw new Error(`Error saving notes: ${response.status}`);
         }
 
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error('Error saving message:', error);
+        console.error('Error saving notes:', error);
         throw error;
     }
 };

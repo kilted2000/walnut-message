@@ -8,23 +8,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Message;
-import com.example.demo.repository.MessageRepository;
+import com.example.demo.model.Note;
+import com.example.demo.repository.NoteRepository;
  @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 public class HelloController {
 
     @Autowired
-    private MessageRepository messageRepository;
+    private NoteRepository noteRepository;
     @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/hello")
-    public Message saveMessage(@RequestBody Message message) {
-        return messageRepository.save(message);
+    public Note saveMessage(@RequestBody Note note) {
+        return noteRepository.save(note);
     }
    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/hello")
-    public List<Message> getMessages() {
-        return messageRepository.findAll();
+    public List<Note> getNotes() {
+        return noteRepository.findAll();
     }
 
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css'
-import MessageComponent from './components/MessageComponent';
+import NoteComponent from './components/NoteComponent';
 function App() {
   return (
       <div className="App">
           <header className="App-header">
-              <MessageComponent />
+              <NoteComponent />
           </header>
       </div>
   )

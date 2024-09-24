@@ -6,17 +6,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Message {
+public class Note {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String content;
 
-    public Message() {
+    public Note() {
     }
 
-    public Message(String content) {
+    public Note(String content) {
         this.content = content;
     }
 
