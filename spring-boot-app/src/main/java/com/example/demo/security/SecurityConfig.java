@@ -1,25 +1,32 @@
-//  package com.example.demo.security;
+// package com.example.demo.security;
+
 
 // import org.springframework.context.annotation.Bean;
 // import org.springframework.context.annotation.Configuration;
+// import static org.springframework.security.config.Customizer.withDefaults;
 // import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 // import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-// import org.springframework.security.web.SecurityFilterChain;
+// import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+// import org.springframework.security.crypto.password.PasswordEncoder;
 
 // @Configuration
 // @EnableWebSecurity
-// public class SecurityConfig {
+// public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-//     @SuppressWarnings({ "removal", "deprecation" })
+//     @Override
+//     protected void configure(HttpSecurity http) throws Exception {
+//         http.cors() 
+//                 .csrf(csrf -> csrf.disable())
+//                 .authorizeRequests(requests -> requests
+//                         .requestMatchers("/hello").authenticated()
+//                         .and()
+//                         .httpBasic(withDefaults())));
+//     }
+
 //     @Bean
-//     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-//         http
-//             .cors() 
-//             .and()
-//             .csrf().disable() 
-//             .authorizeRequests()
-//             .anyRequest().permitAll(); 
-
-//         return http.build();
+//     public PasswordEncoder passwordEncoder() {
+//         return new BCryptPasswordEncoder();
 //     }
 // }
+
+

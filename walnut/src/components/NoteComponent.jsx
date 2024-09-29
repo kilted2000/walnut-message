@@ -31,13 +31,13 @@ const NoteComponent = () => {
     return (
         <div>
             <h1>Suggested Places to See</h1>
-            <ul>
+            <div>
                 {notes.map((note) => (
-                    <li key={note.id}>{note.content}</li>
+                    <p key={note.id}>{note.content}</p>
                 ))}
-            </ul>
+            </div>
             <input
-                type="textarea"
+                type="text"
                 value={newNote}
                 onChange={(e) => setNewNote(e.target.value)}
                 placeholder="Enter new suggestions"

@@ -7,9 +7,10 @@ export const getNotes = async () => {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*", 
+              
             },
             mode: 'cors', 
+            credentials: 'include',
         });
 
         if (!response.ok) {
@@ -30,7 +31,7 @@ export const saveNote = async (content) => {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*", 
+                
             },
             body: JSON.stringify({ content }),
             mode: 'cors', 
